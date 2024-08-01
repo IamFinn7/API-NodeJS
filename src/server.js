@@ -13,11 +13,26 @@ const hostname = process.env.HOST_NAME;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use("/api/v1", appRouter);
-
 //config template engine
 configViewEngine(app);
 
+app.use("/api/v1", appRouter);
+app.use("/", (req, res) => {
+  res.render("home.ejs");
+});
+
+// app.get("/", (req, res) => {
+//   res.send("hello");
+// });
+
+// axios
+//   .get("http://localhost:8080/api/v1/user")
+//   .then((result) => {
+//     console.log(result.data);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
 app.listen(port, hostname, () => {
   console.log(`Example app listening on port ${port}`);
 });
