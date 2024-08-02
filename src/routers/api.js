@@ -1,4 +1,6 @@
 const express = require("express");
+
+// Import middlewares
 const middleware = require("../middlewares/middlewares");
 
 const appRouter = express.Router();

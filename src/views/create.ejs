@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HomePage</title>
-    <link rel="stylesheet" href="/css/home.css" />
+    <title>Create A User</title>
+
+    <link rel="stylesheet" href="/css/create.css" />
   </head>
   <body>
     <nav class="nav">
@@ -14,9 +15,6 @@
         <i class="uil uil-times navCloseBtn"></i>
         <li><a href="/">Home</a></li>
         <li><a href="/create">Create User</a></li>
-        <!-- <li><a href="#">Products</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact Us</a></li> -->
       </ul>
       <i class="uil uil-search search-icon" id="searchIcon"></i>
       <div class="search-box">
@@ -25,21 +23,27 @@
       </div>
     </nav>
 
-    <div class="table-container">
-      <h2 class="table-title">List Users</h2>
-      <table id="userTable" class="fancy-table">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>City</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
+    <div class="form">
+      <form id="createUserForm">
+        <fieldset>
+          <legend>Form add new users</legend>
+          <div class="input-group">
+            <label for="email">Email: </label>
+            <input type="text" id="email" name="email" />
+          </div>
+          <div class="input-group">
+            <label for="name">Name: </label>
+            <input type="text" id="name" name="name" />
+          </div>
+          <div class="input-group">
+            <label for="city">City: </label>
+            <input type="text" id="city" name="city" />
+          </div>
+          <button class="save-btn">Save</button>
+        </fieldset>
+      </form>
     </div>
+
     <script src="/js/home.js"></script>
   </body>
 </html>

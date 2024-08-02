@@ -2,7 +2,10 @@ require("dotenv").config();
 
 const configViewEngine = require("./config/viewEngine");
 const express = require("express");
-const appRouter = require("./routers/index");
+
+//Import Routes
+const appRouter = require("./routers/api");
+const webRoute = require("./routers/web");
 
 const app = express();
 
@@ -17,9 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 configViewEngine(app);
 
 app.use("/api/v1", appRouter);
-app.use("/", (req, res) => {
-  res.render("home.ejs");
-});
+app.use("/", webRoute);
 
 // app.get("/", (req, res) => {
 //   res.send("hello");
