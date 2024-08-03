@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit User</title>
+    <link rel="stylesheet" href="/css/edit.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <i class="uil uil-bars navOpenBtn"></i>
+      <a href="#" class="logo">CodingLab</a>
+      <ul class="nav-links">
+        <i class="uil uil-times navCloseBtn"></i>
+        <li><a href="/">Home</a></li>
+        <li><a href="/create">Create User</a></li>
+      </ul>
+      <i class="uil uil-search search-icon" id="searchIcon"></i>
+      <div class="search-box">
+        <i class="uil uil-search search-icon"></i>
+        <input type="text" placeholder="Search here..." />
+      </div>
+    </nav>
+
+    <div class="form">
+      <form id="editUserForm">
+        <fieldset>
+          <legend>Update a user</legend>
+          <div class="input-group" style="display: none">
+            <label for="id">ID: </label>
+            <input type="text" id="id" name="tempId" readonly />
+          </div>
+          <div class="input-group">
+            <label for="name">Name: </label>
+            <input type="text" id="name" name="tempName" />
+          </div>
+          <div class="input-group">
+            <label for="email">Email: </label>
+            <input type="text" id="email" name="tempEmail" />
+          </div>
+          <div class="input-group">
+            <label for="city">City: </label>
+            <input type="text" id="city" name="tempCity" />
+          </div>
+          <button type="submit" class="save-btn">Save</button>
+        </fieldset>
+      </form>
+    </div>
+
+    <script src="/js/home.js"></script>
+  </body>
+</html>

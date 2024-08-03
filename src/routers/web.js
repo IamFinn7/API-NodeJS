@@ -8,5 +8,8 @@ webRoute.get("/", (req, res) => {
 webRoute.get("/create", (req, res) => {
   res.render("create.ejs");
 });
+webRoute.get("/edit/:id", (req, res) => {
+  res.render("edit.ejs");
+});
 
 module.exports = webRoute;
